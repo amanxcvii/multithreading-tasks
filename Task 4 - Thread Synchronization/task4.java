@@ -1,3 +1,7 @@
+// 4. Thread Synchronization
+// Problem: Create a program that simulates a bank account where multiple threads deposit and withdraw money, ensuring thread safety.
+// Task: Write a Java program using synchronized methods to manage deposits and withdrawals from a shared bank account object.
+
 public class task4 {
 
     public static void main(String[] args) throws InterruptedException {
