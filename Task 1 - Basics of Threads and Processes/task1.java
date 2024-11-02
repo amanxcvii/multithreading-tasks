@@ -8,7 +8,6 @@ public class task1 {
             int val = i;
             Thread thread = new Thread(() -> {
                 System.out.println("Thread"+val+" is running");
-                // System.out.println(Thread.currentThread().getName());
             });
             thread.start();
         }
