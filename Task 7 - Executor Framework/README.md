@@ -1,34 +1,37 @@
-Understanding Executor Framework with a Real-life Example
+# Understanding Executor Framework with a Real-life Example
 
-This document explains how the Executor framework in Java can be used to manage a pool of worker threads efficiently to handle concurrent tasks. The example simulates a scenario where workers process customer orders using a thread pool, demonstrating the power and flexibility of the Executor framework.
-What is the Executor Framework?
+This document explains how the **Executor framework** in Java can be used to manage a pool of worker threads efficiently to handle concurrent tasks. The example simulates a scenario where workers process customer orders using a thread pool, demonstrating the power and flexibility of the Executor framework.
 
-The Executor framework provides a high-level API to manage and control thread execution in Java. It decouples task submission from the details of how each task will be executed (i.e., thread management). This makes concurrent programming easier and more efficient.
+## What is the Executor Framework?
+
+The **Executor framework** provides a high-level API to manage and control thread execution in Java. It decouples task submission from the details of how each task will be executed (i.e., thread management). This makes concurrent programming easier and more efficient.
 
 Key advantages of the Executor framework:
+- **Thread management**: It abstracts the creation, scheduling, and management of threads.
+- **Task submission**: Allows tasks to be submitted for execution without directly managing the thread lifecycle.
+- **Thread pooling**: Reuses worker threads efficiently, reducing the overhead of thread creation.
 
-    Thread management: It abstracts the creation, scheduling, and management of threads.
-    Task submission: Allows tasks to be submitted for execution without directly managing the thread lifecycle.
-    Thread pooling: Reuses worker threads efficiently, reducing the overhead of thread creation.
+### Components of the Executor Framework:
+- **Executor**: The basic interface for task execution. It has the `execute()` method for submitting tasks.
+- **ExecutorService**: Extends `Executor`, providing additional methods to control task execution and manage lifecycle.
+- **ThreadPoolExecutor**: The implementation of `ExecutorService` that manages a pool of threads.
+- **Executors**: A utility class with static factory methods to create different types of thread pools (e.g., fixed thread pool, cached thread pool).
 
-Components of the Executor Framework:
+## Real-life Example: Managing Workers to Process Orders
 
-    Executor: The basic interface for task execution. It has the execute() method for submitting tasks.
-    ExecutorService: Extends Executor, providing additional methods to control task execution and manage lifecycle.
-    ThreadPoolExecutor: The implementation of ExecutorService that manages a pool of threads.
-    Executors: A utility class with static factory methods to create different types of thread pools (e.g., fixed thread pool, cached thread pool).
-
-Real-life Example: Managing Workers to Process Orders
-Problem:
-
+### Problem:
 Imagine you are managing a customer service team where each worker is responsible for processing customer orders. Each worker will handle a specific order concurrently, but you only have a fixed number of workers available. Instead of creating a new thread for each order, you want to reuse existing threads from a pool for better efficiency.
-Solution:
 
-We can use the Executor framework to create a fixed-size thread pool (workers) to process multiple orders concurrently. The framework will take care of managing the worker threads, and each worker will process one order at a time.
-Code Example: Order Processing System
+### Solution:
+We can use the **Executor framework** to create a fixed-size thread pool (workers) to process multiple orders concurrently. The framework will take care of managing the worker threads, and each worker will process one order at a time.
 
-Here’s a simple Java program that demonstrates this using the ExecutorService to manage a pool of workers:
+---
 
+## Code Example: Order Processing System
+
+Here’s a simple Java program that demonstrates this using the `ExecutorService` to manage a pool of workers:
+
+```java
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -129,4 +132,3 @@ The Executor framework in Java simplifies task execution, especially when handli
 Author Info:
 
     Author: Aman Malik - amanxcvii
-
