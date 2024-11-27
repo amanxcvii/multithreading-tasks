@@ -7,6 +7,8 @@
 // •The chef prepares an order and places it on the counter (producer).
 // •The waiter picks up an order from the counter and delivers it to the customer (consumer).
 
+// Author: Aman Malik - amanxcvii
+
 class OrderCounter {
     private boolean orderReady = false;
 
