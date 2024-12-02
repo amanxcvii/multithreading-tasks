@@ -130,7 +130,7 @@ Welcome to the **Java Multithreading Tasks Repository**! This repository is inte
 ## Getting Started
 
 1. **Clone the repository**:
-   git clone https://github.com/your-username/java-multithreading-practice.git
+   git clone https://github.com/amanxcvii/multithreading-tasks
 2. **Navigate into the project directory**:
-   cd java-multithreading-practice
+   cd multithreading-tasks
 3. **Compile and run each example individually, based on the directory or package structure.**
