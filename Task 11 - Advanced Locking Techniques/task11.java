@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class StackWithReadWriteLockExample {
+public class task11 {
     private final Stack<Integer> sharedStack = new Stack<>();
     private final ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
     private final ReentrantReadWriteLock.ReadLock readLock = lock.readLock();
